@@ -51,6 +51,8 @@ header nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  -webkit-animation: nav-animation 1s;
+          animation: nav-animation 1s;
 }
 
 main {
@@ -119,4 +121,50 @@ main {
 .read-more:hover {
   background-color: rgb(77, 124, 115);
   color: rgb(231, 231, 231);
+}
+
+.opener {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: -1;
+  -webkit-animation: animation 1s;
+          animation: animation 1s;
+}
+
+@-webkit-keyframes animation {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes animation {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@-webkit-keyframes nav-animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes nav-animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */
