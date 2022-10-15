@@ -7,21 +7,37 @@ html {
 
 body {
   margin: 0px;
-  background-image: url("../icons/Mountain_icon-2.svg.png");
-  background-size: auto 80%;
-  background-position-y: bottom;
-  background-position-x: 50%;
-  background-repeat: no-repeat;
+  height: 100%;
+  overflow-anchor: 0;
+}
+
+.background {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.background img {
+  position: absolute;
+  height: 90%;
+  right: 0;
+  bottom: -60px;
+  filter: invert(0%) sepia(100%) saturate(10%) hue-rotate(170deg) brightness(93%) contrast(100%);
 }
 
 header {
-  background-color: rgb(215, 255, 248);
   height: 15%;
   font-size: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+header img {
+  filter: invert(50%) sepia(100%) saturate(150%) hue-rotate(100deg) brightness(70%) contrast(100%);
 }
 header nav {
   font-size: 20px;
@@ -39,14 +55,16 @@ header nav {
 
 main {
   height: 80%;
+  width: 100%;
   font-family: "Arial black";
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-main .description {
-  font-size: 80px;
+
+.description {
+  font-size: 100px;
   width: 50%;
   max-width: 500px;
   text-align: center;
@@ -56,22 +74,31 @@ main .description {
   align-items: center;
   justify-content: center;
 }
-main .description span {
+.description span {
   color: rgb(77, 124, 115);
 }
-main div img {
-  width: 600px;
+
+.images {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  text-align: center;
+}
+.images img {
+  box-shadow: 2px 2px 10px 1px rgb(99, 99, 99);
+  width: 70%;
 }
 
 .sign-in {
+  transition: all 0.25s;
   width: 150px;
   height: 50px;
   font-size: 20px;
   border-radius: 30px;
   border: none;
   background-color: rgb(77, 124, 115);
-  color: rgb(255, 255, 255);
-  transition: all 0.25s;
+  color: rgb(231, 231, 231);
+  cursor: pointer;
 }
 .sign-in:hover {
   background-color: rgb(231, 231, 231);
@@ -79,6 +106,7 @@ main div img {
 }
 
 .read-more {
+  transition: all 0.25s;
   width: 150px;
   height: 50px;
   font-size: 20px;
@@ -86,4 +114,9 @@ main div img {
   border: none;
   background-color: rgb(231, 231, 231);
   color: rgb(77, 124, 115);
+  cursor: pointer;
+}
+.read-more:hover {
+  background-color: rgb(77, 124, 115);
+  color: rgb(231, 231, 231);
 }/*# sourceMappingURL=style.css.map */
